@@ -79,29 +79,29 @@ class LinkedList {
         return cnt;
     }
 
-    void searchByName(string name) {
+    Student searchByName(string name) {
         Node *temp = head;
         while (temp != nullptr) {
             if (temp->student.name == name) {
                 temp->student.display();
-                return;
+                return temp->student;
             }
             temp = temp->next;
         }
         cout << "No such student found\n";
-        return;
+        return Student(0,"","",0.0);
     }
 
-    void searchByRollNo(int rollno) {
+    Student searchByRollNo(int rollno) {
         Node *temp = head;
         while (temp != nullptr) {
             if (temp->student.rollNo == rollno) {
                 temp->student.display();
-                return;
+                return temp->student;
             }
             temp = temp->next;
         }
         cout << "No such student found\n";
-        return;
+        return Student(0,"","",0.0);
     }
 };
